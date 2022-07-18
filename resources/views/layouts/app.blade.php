@@ -55,6 +55,9 @@
                                 </li>
                             @endif
                         @else
+                            <li class="nav-item"> <a href="{{ url('/home') }}" class="nav-link text-sm text-gray-700 dark:text-gray-500 underline">{{ __('Home') }}</a></li>
+                            <li class="nav-item"><a href="{{ url('/employee') }}" class="nav-link text-sm text-gray-700 dark:text-gray-500 underline">{{ __('Employee') }}</a></li>
+
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                     {{ Auth::user()->name }} <span class="caret"></span>
