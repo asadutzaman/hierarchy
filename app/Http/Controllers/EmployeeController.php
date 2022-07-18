@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Employee;
+use App\Models\User;
+use App\Models\Department;
+use App\Models\Role;
 use Illuminate\Http\Request;
 
 class EmployeeController extends Controller
@@ -14,7 +17,12 @@ class EmployeeController extends Controller
      */
     public function index()
     {
-        //
+        $employee       = Employee::orderBy('id')->get();
+        $users          = User::orderBy('id')->get();
+        $departments    = Department::orderBy('id')->get();
+        $roles          = Role::orderBy('id')->get();
+        
+        return view('employee', compact('employee', 'users', 'departments', 'roles'));
     }
 
     /**
@@ -35,7 +43,21 @@ class EmployeeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'user_id'           =>  'required',
+            'department_id'         =>  'required',
+            'role_id'     =>  'required'
+        ]);
+
+        $form_data = array(
+            'user_id'           =>  $request->user_id,
+            'department_id'         =>  $request->department_id,
+            'role_id'     =>  $request->role_id
+        );
+
+        Employee::create($form_data);
+
+        return redirect('employee')->with('success', 'Data Added successfully.');
     }
 
     /**
