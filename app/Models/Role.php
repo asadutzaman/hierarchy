@@ -12,8 +12,10 @@ class Role extends Model
     protected $guarded = [];
 
     public function child(){
-
         return $this->hasMany('App\Models\Role', 'parent_id');
+    }
 
+    public function employees(){
+        return $this->hasMany('App\Models\Employee', 'role_id');
     }
 }
