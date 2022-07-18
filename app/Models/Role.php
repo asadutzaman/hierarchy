@@ -7,5 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class Role extends Model
 {
-    use HasFactory;
+    // use HasFactory;
+
+    protected $guarded = [];
+
+    public function child(){
+
+        return $this->hasMany('App\Models\Role', 'parent_id');
+
+    }
 }

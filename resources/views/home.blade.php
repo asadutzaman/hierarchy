@@ -14,7 +14,16 @@
                         </div>
                     @endif
 
-                    {{ __('You are logged in!') }}
+                    @foreach($parentRoles as $role)
+ 
+                        {{$role->name}}
+
+                        @if(count($role->child))
+                            @include('child',['childs' => $role->child])
+                        @endif
+                    
+                    @endforeach
+
                 </div>
             </div>
         </div>

@@ -16,7 +16,7 @@ class CreateDepartmentsTable extends Migration
         Schema::create('departments', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->integer('manage_by')->unsigned();
+            $table->Biginteger('manage_by')->unsigned();
             $table->foreign('manage_by')->references('id')->on('users');
             $table->tinyInteger('status')->default('1');
             $table->softDeletes($column = 'deleted_at', $precision = 0);
