@@ -1,6 +1,6 @@
 ## Installation
 
-1.https://github.com/asadutzaman/hierarchy.git
+1.https://github.com/asadutzaman/hierarchy.git <br>
 2.composer update
 3.cp .env.example .env
 4.php artisan key:generate
