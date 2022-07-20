@@ -13,5 +13,4 @@ pass - 123456789<br>
 
 ## Screenshot
 ## Login
-<img src="{{ url('/')}}/public/image/login.png">
 ![alt text](https://github.com/asadutzaman/hierarchy/blob/main/public/image/login.png)
