@@ -12,5 +12,11 @@ user - asad@gmail.com <br>
 pass - 123456789<br>
 
 ## Screenshot
-## Login
+### Login
 ![alt text](https://github.com/asadutzaman/hierarchy/blob/main/public/image/login.png)
+### Hierarchy
+![alt text](https://github.com/asadutzaman/hierarchy/blob/main/public/image/hierarchy1.png)
+### Employee
+![alt text](https://github.com/asadutzaman/hierarchy/blob/main/public/image/employee.png)
+### Employee Form
+![alt text](https://github.com/asadutzaman/hierarchy/blob/main/public/image/employee_form.png)
